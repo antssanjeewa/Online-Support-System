@@ -3,9 +3,12 @@
 
 # Online Support System
 
-## _About Application
+## About Application
 
-We are active as an open source platform and provide a perfect place for everyone who is interested in education. Our main purpose is to combine gamification with learning to make it a unique experience for learners all over the world. Also, we prepare a valuable field for onboarding and its related features which is a great opportunity for companies to take part.
+Online Support System is a web application which helps service providers and sellers to
+provide after-sales support for their customers. Customers are allowed to open a ticket when
+they need assistance on something related to the product or service they purchased. Support
+agents get in contact with the ticket owner to help resolve their issues.
 
 # Getting started
 
@@ -69,5 +72,18 @@ Improvements :
     
 -   Use Vuw3 and InertiaJs for Frontend Development.
 
+
+<h2>SCREENSHOTS</h2>
+
+1) <h4>Home</h4>
+  First Page
+   
+![alt text](screenshots/Home_Web.png)
+
+
+1) <h4>Ticket List</h4>
+  Ticket List Show table
+   
+![alt text](screenshots/Ticket_list_web.png)
 
 ## License

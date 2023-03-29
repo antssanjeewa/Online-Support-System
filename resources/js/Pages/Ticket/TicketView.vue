@@ -66,6 +66,7 @@ function saveReply() {
           <div class="flex justify-end">
             <button
               class="bg-blue-400 px-3 rounded text-white"
+              :class="{ 'bg-gray-400': form.processing }"
               @click="saveReply"
               :disabled="form.processing"
             >

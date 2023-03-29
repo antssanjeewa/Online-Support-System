@@ -48,17 +48,20 @@ const submit = () => {
           class="w-full"
         />
 
-        <InputField
+        <label class="text-sm">Describe Your Problem</label>
+        <textarea
           v-model="form.description"
-          :error="errors?.description"
-          type="text"
-          label="Describe Your Problem"
-          class="w-full"
-        />
+          rows="3"
+          class="w-full border-gray-300 rounded"
+        ></textarea>
+        <div v-if="errors?.description" class="text-red-500 text-sm">
+          {{ errors?.description }}
+        </div>
       </div>
 
       <button
         class="bg-blue-500 text-white w-full rounded py-2 my-3 font-bold"
+        :class="{ 'bg-gray-400': form.processing }"
         :disabled="form.processing"
       >
         Submit

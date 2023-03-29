@@ -8,6 +8,7 @@ import DataTable from "./DataTable.vue";
 const props = defineProps({
   items: Object,
   form_filters: Object,
+  success: String,
 });
 
 const filters = reactive({
@@ -46,11 +47,18 @@ function reset() {
 
 <template>
   <AppLayout title="Dashboard">
+    <div
+      v-if="success"
+      class="bg-green-100 text-green-700 py-3 text-center rounded flex justify-between"
+    >
+      <span></span>
+      {{ success }}
+      <span class="px-5 cursor-pointer" @click="success = null">X</span>
+    </div>
+    <!-- Title -->
     <div class="text-3xl mb-4">Ticket List</div>
     <div class="bg-white overflow-hidden shadow sm:rounded-lg">
       <div class="p-5">
-        <!-- Title -->
-
         <!-- Search Field -->
         <div class="flex max-w-md mr-4 mb-3">
           <select

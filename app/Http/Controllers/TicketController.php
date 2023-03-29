@@ -112,7 +112,7 @@ class TicketController extends Controller
         Mail::to($ticket->email)
             ->send($email);
 
-        return redirect()->route('dashboard')->with('success', 'Successfully Updated Ticket');
+        return redirect()->route('dashboard')->with('success', 'Successfully Send Reply');
     }
 
 
