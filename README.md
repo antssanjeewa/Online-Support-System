@@ -15,7 +15,7 @@ agents get in contact with the ticket owner to help resolve their issues.
 ## Requirements
 
     PHP 8.1 or above
-    [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+    composer
     mysql database
 
 ## Installation
