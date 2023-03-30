@@ -1,9 +1,9 @@
 <x-mail::message>
 # Hi, {{ $details['name'] }}
 
-You are Successfully Create a new Ticket.<br>
+You have successfully created a new ticket.<br>
 
-You Reference Number is : {{ $details['ref_number'] }}<br>
+You Ticket Reference Number is : {{ $details['ref_number'] }}<br>
 
 
 Thanks,<br>

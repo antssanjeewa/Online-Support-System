@@ -25,4 +25,12 @@ class UpdateTicketRequest extends FormRequest
             "message" => ['required','string','min:5']
         ];
     }
+
+    public function messages() : array
+    {
+        return [
+            'message.required' => 'Please Enter Your Reply',
+            'message.min'      => "The Reply must be at least :min characters",
+        ];
+    }
 }

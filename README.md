@@ -12,6 +12,12 @@ agents get in contact with the ticket owner to help resolve their issues.
 
 # Getting started
 
+## Requirements
+
+    PHP 8.1 or above
+    [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+    mysql database
+
 ## Installation
 
 Please check the official laravel installation guide for server requirements before you start. 
@@ -29,9 +35,30 @@ Install all the dependencies using composer
 
     composer install
 
-make the required configuration changes in the .env file
+Copy that example file as our main .env file with this command
 
-    .env
+    cp .env.example .env
+
+Edit that new .env file, Change the DATABASE_USER and DATABASE_PASSWORD variables,
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=online_support_system
+    DB_USERNAME= { DATABASE_USER }
+    DB_PASSWORD= { DATABASE_PASSWORD }
+
+And also add the mail configuration details, Change the YOUR_MAIL_ADDRESS and YOUR_MAIL_PASSWORD,
+[For more Details](https://www.itsolutionstuff.com/post/laravel-8-mail-laravel-8-send-email-tutorialexample.html?utm_content=sr-left)
+
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.gmail.com
+    MAIL_PORT=587
+    MAIL_USERNAME= { YOUR_MAIL_ADDRESS }
+    MAIL_PASSWORD= { YOUR_MAIL_PASSWORD }
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS= { YOUR_MAIL_ADDRESS }
+    MAIL_FROM_NAME="${APP_NAME}"
 
 Generate a new application key
 
@@ -81,8 +108,8 @@ Improvements :
 ![alt text](screenshots/Home_Web.png)
 
 
-1) <h4>Ticket List</h4>
-  Ticket List Show table
+2) <h4>Ticket List</h4>
+  Ticket List Show Table
    
 ![alt text](screenshots/Ticket_list_web.png)
 
